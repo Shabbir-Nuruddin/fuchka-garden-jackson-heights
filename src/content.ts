@@ -1,0 +1,102 @@
+import "@fontsource/baloo-2/800.css";
+import type { Site } from "./lib";
+
+const e = (s: string) => ({ en: s, hi: s });
+
+export const SITE: Site = {
+  name: "Fuchka Garden",
+  sub: e("Bangladeshi street food cart · Jackson Heights"),
+  banner: e("Noon to 2:30 AM, 3 AM on weekends · 73-01 37th Ave, Jackson Heights"),
+  phone: "19293030800",
+  phoneDisplay: "+1 (929) 303-0800",
+  lat: 40.7490203,
+  lon: -73.892316,
+  hours: [[12, 27], [12, 26], [12, 26.5], [12, 26.5], [12, 26.5], [12, 26.5], [12, 27]],
+  theme: {
+    dark: true,
+    bg: "#07130d",
+    bg2: "#0c1c14",
+    panel: "#102419",
+    ink: "#effaf3",
+    ink2: "#b3cdbd",
+    ink3: "#789685",
+    line: "#1a3326",
+    accent: "#3ddc84",
+    onAccent: "#03140a",
+    display: "Baloo 2",
+    weight: 800,
+    upper: false,
+  },
+  scene: "lanterns",
+  align: "left",
+  hero: {
+    title: [e("Fuchka and bhelpuri,"), e("till 3 AM.")],
+    proof: e("4.8 on Google from 262 reviews. Fuchka, doi fuchka, bhelpuri, chotpoti, jhalmuri and cha from a student-run cart on 37th Avenue, open from noon until late."),
+    fallback: "/img/p1.jpg",
+    slides: ["/img/p1.jpg", "/img/p12.jpg", "/img/p3.jpg"],
+  },
+  marquee: ["Fuchka", "Doi Fuchka", "Bhelpuri", "Chotpoti", "Jhalmuri", "Fuchka Shots", "Naga Fuchka", "Cha"],
+  dishes: {
+    title: e("Best in Jackson Heights, they say"),
+    body: e("Real Google reviews, word for word."),
+    layout: "list",
+    items: [
+      { name: e("Bhelpuri"), quote: "The Bhelpuri was absolutely incredible—easily 100/10.", img: "/img/p3.jpg" },
+      { name: e("Doi Fuchka"), quote: "They make the best Doi Fuchka I've ever tasted in my life.", img: "/img/p12.jpg" },
+      { name: e("Fuchka"), quote: "The puris were perfectly crisp—no sogginess at all—and they cracked open with the right crunch.", img: "/img/p5.jpg" },
+      { name: e("Chotpoti"), quote: "We had the Fuchka and Chotpoti. Both were excellent - spicy, tangy and flavorful." },
+      { name: e("Naga Fuchka"), quote: "As a spice lover, I ordered the naga fuchka, and it did not disappoint." },
+      { name: e("Cha"), quote: "Bhelpuri 10/10 Customer service 100/10 Cha 10000/10" },
+    ],
+  },
+  gallery: {
+    title: e("From the cart"),
+    layout: "strip",
+    photos: [
+      { src: "/img/p2.jpg", alt: "Jhalmuri" },
+      { src: "/img/p10.jpg", alt: "Chotpoti", wide: true },
+      { src: "/img/p7.jpg", alt: "Fuchka plate" },
+      { src: "/img/p11.jpg", alt: "Sweet fuchka" },
+      { src: "/img/p14.jpg", alt: "Spread", wide: true },
+      { src: "/img/p9.jpg", alt: "Fuchka with chutney" },
+    ],
+  },
+  feature: {
+    kind: "hosts",
+    title: e("Shawon's cart"),
+    body: e("A CUNY student-run business. The owner is at the cart most days."),
+    img: "/img/p4.jpg",
+    hosts: [
+      { name: "Shawon", quote: "The owner Shawon is a genuine and kind man." },
+      { name: "Ali", quote: "Ali helped us decide by being up front that they're all great." },
+      { name: "On site", quote: "the owner is on-site at least half the time and is really a great guy." },
+      { name: "The stand", quote: "The two guys at the stand were really nice and always have a smile on their face dealing with customers." },
+    ],
+  },
+  reviews: {
+    title: e("252 of 262 reviews are four or five stars"),
+    rating: 4.8,
+    dist: [241, 11, 2, 0, 8],
+    quotes: [
+      { quote: "Best fuchka in NYC. I have tried regular fuchka, dahi fuchka, fuchka shot and their milk tea.", stars: 5 },
+      { quote: "of all the street food carts there are in Jackson heights, this place is the best. the food is amazing, but the hospitality is even better!", stars: 5 },
+    ],
+  },
+  visit: {
+    title: e("37th Ave & 73rd St"),
+    img: "/img/p6.jpg",
+    alt: "Fuchka Garden cart",
+    address: e("73-01 37th Ave, Jackson Heights, NY 11372 (by Duane Reade)"),
+    note: e("Noon to 2:30 AM. Till 2 AM on Monday, 3 AM on Saturday and Sunday."),
+  },
+  build: {
+    title: e("Order ahead"),
+    body: e("Tap what you'd like and when you'll come by. It goes to WhatsApp exactly as you see it."),
+    items: [e("Fuchka"), e("Doi Fuchka"), e("Fuchka Shots"), e("Naga Fuchka"), e("Bhelpuri"), e("Chotpoti"), e("Jhalmuri"), e("Cha")],
+    people: true,
+    when: true,
+    hello: e("Hi Fuchka Garden, I'd like:"),
+  },
+  waHello: e("Hi Fuchka Garden, I'd like to order. Items: , time: "),
+  order: ["dishes", "build", "feature", "gallery", "reviews", "visit"],
+};
